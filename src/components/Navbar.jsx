@@ -1,13 +1,12 @@
 import React from "react";
-import PizzaRed from "./Styles";
-import Styled from "styled-components";
-
-const StyledNavbar = Styled.div`
-  background-color: #f44336;
-`;
+import { StyledNavbar, Logo } from "./Styles";
 
 function Navbar() {
-  return <StyledNavbar>PZ Pizza</StyledNavbar>;
+  return (
+    <StyledNavbar>
+      <Logo> PZ Pizza </Logo>
+    </StyledNavbar>
+  );
 }
 
 export default Navbar;
