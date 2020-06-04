@@ -2,6 +2,7 @@ import React from "react";
 import { createGlobalStyle } from "styled-components";
 import Navbar from "./components/Navbar";
 import Poster from "./components/Poster";
+import Menu from "./components/Menu"
 
 const GlobalStyle = createGlobalStyle`
   body{
@@ -21,6 +22,7 @@ export default function App() {
       <GlobalStyle />
       <Navbar />
       <Poster />
+      <Menu />
       <h1>Hello CodeSandbox</h1>
     </div>
   );
