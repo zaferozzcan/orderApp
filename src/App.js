@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { createGlobalStyle } from "styled-components";
 import Navbar from "./components/Navbar";
 import Poster from "./components/Poster";
-import Menu from "./components/Menu"
+import Menu from "./components/Menu";
+import FoodDialog from "./components/FoodDialog";
 
 const GlobalStyle = createGlobalStyle`
   body{
@@ -17,12 +18,16 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 export default function App() {
+  const [openFood, setOpenFood] = useState();
+
   return (
     <div className="App">
       <GlobalStyle />
+      <FoodDialog />
       <Navbar />
       <Poster />
-      <Menu />
+      <div>{openFood}</div>
+      <Menu setOpenFood={setOpenFood} />
       <h1>Hello CodeSandbox</h1>
     </div>
   );
